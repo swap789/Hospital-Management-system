@@ -1,0 +1,35 @@
+<div class="login-box">
+</div>
+<div class="example-form">
+    <form [formGroup]="loginForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input type="text" matInput formControlName="username">
+            <mat-error *ngIf="loginForm?.controls?.username?.status === 'INVALID'">
+                Please enter a valid username
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput formControlName="password">
+            <mat-error *ngIf="loginForm?.controls?.password?.status === 'INVALID'">
+                Please enter a valid password
+            </mat-error>
+
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="loginForm.status == 'INVALID'"
+            (click)="login()">Login</button>
+        <div>Forgot Password?</div>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+    </form>
+    <button class="register" mat-stroked-button (click)="register()">Register</button>
+    <mat-radio-group aria-label="Select an option" *ngIf="showRegisterOption">
+        <mat-radio-button value="admin">Admin</mat-radio-button>
+        <mat-radio-button value="doctor">Doctor</mat-radio-button>
+        <mat-radio-button value="patient">Patient</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div>
+</div>

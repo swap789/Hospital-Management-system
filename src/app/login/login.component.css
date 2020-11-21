@@ -1,0 +1,26 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin:auto;
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 22px 27px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .login-box {
+      padding-bottom:100px;
+  }
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  .register {
+    margin-right: 10px;
+  }
